@@ -1,0 +1,124 @@
+# Alacritty Config - Tokyo Night Storm Theme
+# Carsten's Arch Linux Setup
+
+# ============================================
+# WINDOW SETTINGS
+# ============================================
+[window]
+opacity = 0.95
+padding = { x = 10, y = 10 }
+decorations = "Full"
+dynamic_title = true
+
+[window.dimensions]
+columns = 120
+lines = 30
+
+# ============================================
+# SCROLLING
+# ============================================
+[scrolling]
+history = 10000
+multiplier = 3
+
+# ============================================
+# FONT CONFIGURATION
+# ============================================
+[font]
+size = 11.0
+
+[font.normal]
+family = "DejaVu Sans Mono"
+style = "Regular"
+
+[font.bold]
+family = "DejaVu Sans Mono"
+style = "Bold"
+
+[font.italic]
+family = "DejaVu Sans Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "DejaVu Sans Mono"
+style = "Bold Italic"
+
+# ============================================
+# TOKYO NIGHT STORM COLORS
+# ============================================
+[colors.primary]
+background = "#24283b"  # Tokyo Night Storm Background
+foreground = "#c0caf5"  # Tokyo Night Storm Foreground
+
+[colors.cursor]
+text = "#24283b"
+cursor = "#c0caf5"
+
+[colors.selection]
+text = "CellForeground"
+background = "#364A82"
+
+# Normal colors
+[colors.normal]
+black   = "#414868"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
+
+# Bright colors
+[colors.bright]
+black   = "#414868"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
+
+# ============================================
+# BELL
+# ============================================
+[bell]
+animation = "EaseOutExpo"
+duration = 100
+
+# ============================================
+# CURSOR
+# ============================================
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 750
+unfocused_hollow = true
+
+# ============================================
+# KEYBOARD
+# ============================================
+[keyboard]
+bindings = [
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+]
+
+# ============================================
+# MOUSE
+# ============================================
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Right"
+action = "PasteSelection"
+
+# ============================================
+# GENERAL
+# ============================================
+[env]
+TERM = "xterm-256color"

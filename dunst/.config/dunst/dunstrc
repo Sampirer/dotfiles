@@ -1,0 +1,115 @@
+# Dunst Config - Tokyo Night Storm Theme
+# Carsten's Arch Linux Setup
+
+[global]
+    # ============================================
+    # DISPLAY
+    # ============================================
+    monitor = 0
+    follow = mouse
+    
+    # Geometry
+    width = (300, 400)
+    height = 300
+    origin = top-right
+    offset = 20x50
+    
+    # ============================================
+    # APPEARANCE
+    # ============================================
+    transparency = 5
+    separator_height = 2
+    padding = 12
+    horizontal_padding = 12
+    frame_width = 2
+    frame_color = "#7dcfff"  # Tokyo Night Cyan
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+    
+    # ============================================
+    # TEXT
+    # ============================================
+    font = DejaVu Sans Mono 10
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    
+    # ============================================
+    # ICONS
+    # ============================================
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/
+    
+    # ============================================
+    # HISTORY
+    # ============================================
+    sticky_history = yes
+    history_length = 20
+    
+    # ============================================
+    # MISC
+    # ============================================
+    dmenu = /usr/bin/rofi -dmenu -p dunst:
+    browser = /usr/bin/firefox
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 8
+    ignore_dbusclose = false
+    
+    # ============================================
+    # MOUSE
+    # ============================================
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+# ============================================
+# TOKYO NIGHT STORM COLOR URGENCY LEVELS
+# ============================================
+
+[urgency_low]
+    background = "#24283b"  # Tokyo Night Background
+    foreground = "#c0caf5"  # Tokyo Night Foreground
+    frame_color = "#7aa2f7"  # Tokyo Night Blue
+    timeout = 5
+
+[urgency_normal]
+    background = "#24283b"
+    foreground = "#c0caf5"
+    frame_color = "#7dcfff"  # Tokyo Night Cyan
+    timeout = 10
+
+[urgency_critical]
+    background = "#24283b"
+    foreground = "#c0caf5"
+    frame_color = "#f7768e"  # Tokyo Night Red
+    timeout = 0
+
+# ============================================
+# APPLICATION SPECIFIC RULES (optional)
+# ============================================
+
+[spotify]
+    appname = Spotify
+    format = "<b>🎵 Spotify</b>\n%s\n%b"
+    frame_color = "#9ece6a"  # Green
+    timeout = 5
+
+[discord]
+    appname = discord
+    format = "<b>💬 Discord</b>\n%s\n%b"
+    frame_color = "#bb9af7"  # Magenta
+    timeout = 5
