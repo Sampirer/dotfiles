@@ -69,6 +69,7 @@ keys = [
     # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "b", lazy.spawn("brave"), desc="Launch browser"),
     Key([mod], "e", lazy.spawn("thunar"), desc="Launch file manager"),
+    Key([mod], "c", lazy.spawn("code"), desc="Launch VS Code"),
 
     # Screenshots (Flameshot)
     Key([], "Print", lazy.spawn("flameshot gui"), desc="Screenshot"),
