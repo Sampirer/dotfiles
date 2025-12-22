@@ -223,6 +223,7 @@ def init_widgets_list():
             background=colors["bg"],
             update_interval=5,
             disconnected_message="📶 Nicht verbunden",
+            mouse_callbacks={"Button1": lazy.spawn("~/.config/qtile/../../scripts/rofi-wifi.sh")},
         ),
 
         widget.Sep(
