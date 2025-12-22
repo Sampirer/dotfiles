@@ -118,7 +118,7 @@ layouts = [
 # ============================================
 widget_defaults = dict(
     font="DejaVu Sans Mono",
-    fontsize=12,
+    fontsize=14,
     padding=3,
     background=colors["bg"],
     foreground=colors["fg"],
