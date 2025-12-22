@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# blesh (Bash Line Editor)
+[[ $- == *i* ]] && source /usr/share/blesh/ble.sh --noattach
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # PS1='[\u@\h \W]\$ '  # Deaktiviert für Starship
@@ -34,3 +37,6 @@ alias aid-arch='cd ~/repos/arch-install && aider'
 alias aid-qtile='cd ~/repos/dotfiles && aider qtile/.config/qtile/config.py'
 alias aid-haiku='aider --model openrouter/anthropic/claude-3-5-haiku'
 alias cls='clear'
+
+# blesh attachment (at end of .bashrc)
+[[ ${BLE_VERSION-} ]] && ble-attach
