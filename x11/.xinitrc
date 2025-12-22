@@ -49,8 +49,8 @@ dunst &
 # Netzwerk-Applet
 nm-applet &
 
-# Wallpaper (optional, erstmal einfarbig)
-xsetroot -solid "#282a36"
+# Wallpaper
+nitrogen --restore 2>/dev/null || xsetroot -solid "#282a36"
 
 # Qtile starten
 exec qtile start
