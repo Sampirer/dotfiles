@@ -170,18 +170,6 @@ def init_widgets_list():
             background=colors["bg"],
         ),
 
-        # System Tray
-        widget.Systray(
-            background=colors["bg"],
-            padding=5,
-        ),
-
-        widget.Sep(
-            linewidth=0,
-            padding=10,
-            foreground=colors["bg"],
-            background=colors["bg"],
-        ),
 
         # CPU Usage
         widget.CPU(
