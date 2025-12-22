@@ -25,8 +25,8 @@ fi
 
 # Aliases
 alias aid='aider'
-alias aid-dot='cd ~/dotfiles && aider'
-alias aid-arch='cd ~/arch-install && aider'
-alias aid-qtile='cd ~/dotfiles && aider qtile/.config/qtile/config.py'
+alias aid-dot='cd ~/repos/dotfiles && aider'
+alias aid-arch='cd ~/repos/arch-install && aider'
+alias aid-qtile='cd ~/repos/dotfiles && aider qtile/.config/qtile/config.py'
 alias aid-haiku='aider --model openrouter/anthropic/claude-3-5-haiku'
 alias cls='clear'
