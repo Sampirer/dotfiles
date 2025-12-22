@@ -5,4 +5,4 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # uv
-export PATH="/home/carsten/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

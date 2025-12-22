@@ -189,7 +189,7 @@ def init_widgets_list():
             foreground=colors["green"],
             background=colors["bg"],
             update_interval=2,
-            mouse_callbacks={"Button1": lambda: lazy.spawn(terminal + " -e htop")},
+            mouse_callbacks={"Button1": lazy.spawn(terminal + " -e htop")},
         ),
 
         widget.Sep(
@@ -205,7 +205,7 @@ def init_widgets_list():
             foreground=colors["yellow"],
             background=colors["bg"],
             update_interval=2,
-            mouse_callbacks={"Button1": lambda: lazy.spawn(terminal + " -e htop")},
+            mouse_callbacks={"Button1": lazy.spawn(terminal + " -e htop")},
         ),
 
         widget.Sep(
@@ -215,7 +215,7 @@ def init_widgets_list():
             background=colors["bg"],
         ),
 
-        # Network (requires python-iwlib for WiFi)
+        # Network
         widget.Net(
             format="  {down} ↓↑ {up}",
             foreground=colors["cyan"],
@@ -282,7 +282,7 @@ def init_widgets_list():
             foreground=colors["red"],
             background=colors["bg"],
             fontsize=16,
-            mouse_callbacks={"Button1": lambda: lazy.spawn("rofi -show power-menu")},
+            mouse_callbacks={"Button1": lazy.spawn("rofi -show power-menu")},
         ),
     ]
     return widgets_list

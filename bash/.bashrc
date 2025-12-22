@@ -11,7 +11,7 @@ PS1='[\u@\h \W]\$ '
 export DMENU="rofi -dmenu"
 
 # uv
-export PATH="/home/carsten/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # === Aider AI Assistant ===
 # API Key laden (sicher)
@@ -19,6 +19,8 @@ if [[ -f ~/.config/aider/.env ]]; then
     set -a
     source ~/.config/aider/.env
     set +a
+    # Stelle sicher, dass API Keys nicht in der History landen
+    export HISTIGNORE="*OPENAI*:*ANTHROPIC*:*API*:$HISTIGNORE"
 fi
 
 # Aliases

@@ -1,49 +1,40 @@
 #!/bin/sh
 
-prefix="/usr"
-exec_prefix="${prefix}"
-xrdb="xrdb"
-xinitdir="/etc/X11/xinit"
-xclock="xclock"
-xterm="xterm"
-twm="twm"
-xmodmap="xmodmap"
-
 userresources="$HOME/.Xresources"
 usermodmap="$HOME/.Xmodmap"
-sysresources="$xinitdir/.Xresources"
-sysmodmap="$xinitdir/.Xmodmap"
+sysresources="/etc/X11/xinit/.Xresources"
+sysmodmap="/etc/X11/xinit/.Xmodmap"
 
 # merge in defaults and keymaps
 
 if [ -f "$sysresources" ]; then
     if [ -x /usr/bin/cpp ] ; then
-        "$xrdb" -merge "$sysresources"
+        xrdb -merge "$sysresources"
     else
-        "$xrdb" -nocpp -merge "$sysresources"
+        xrdb -nocpp -merge "$sysresources"
     fi
 fi
 
 if [ -f "$sysmodmap" ]; then
-    "$xmodmap" "$sysmodmap"
+    xmodmap "$sysmodmap"
 fi
 
 if [ -f "$userresources" ]; then
     if [ -x /usr/bin/cpp ] ; then
-        "$xrdb" -merge "$userresources"
+        xrdb -merge "$userresources"
     else
-        "$xrdb" -nocpp -merge "$userresources"
+        xrdb -nocpp -merge "$userresources"
     fi
 fi
 
 if [ -f "$usermodmap" ]; then
-    "$xmodmap" "$usermodmap"
+    xmodmap "$usermodmap"
 fi
 
 # start some nice programs
 
-if [ -d "$xinitdir"/xinitrc.d ] ; then
-	for f in "$xinitdir/xinitrc.d"/?*.sh ; do
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+	for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
 		[ -x "$f" ] && . "$f"
 	done
 	unset f
