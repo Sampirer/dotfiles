@@ -5,7 +5,7 @@
 # WINDOW SETTINGS
 # ============================================
 [window]
-opacity = 0.9
+opacity = 0.85
 padding = { x = 10, y = 10 }
 decorations = "Full"
 dynamic_title = true
