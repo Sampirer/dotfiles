@@ -52,5 +52,14 @@ nm-applet &
 # Wallpaper
 nitrogen --restore 2>/dev/null || xsetroot -solid "#282a36"
 
+# Bluetooth-Applet
+blueman-applet &
+
+# USB Auto-Mount
+udiskie --tray &
+
+# Batterie-Applet
+cbatticon &
+
 # Qtile starten
 exec qtile start
