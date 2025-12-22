@@ -294,7 +294,7 @@ screens = [
     Screen(
         top=bar.Bar(
             init_widgets_list(),
-            24,  # Bar height
+            28,  # Bar height
             background=colors["bg"],
             opacity=0.95,  # Leichte Transparenz
         ),
