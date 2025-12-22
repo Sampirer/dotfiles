@@ -14,8 +14,12 @@ export DMENU="rofi -dmenu"
 export PATH="/home/carsten/.local/bin:$PATH"
 
 # === Aider AI Assistant ===
-# API Key laden
-[[ -f ~/.config/aider/.env ]] && export $(grep -v '^#' ~/.config/aider/.env | xargs)
+# API Key laden (sicher)
+if [[ -f ~/.config/aider/.env ]]; then
+    set -a
+    source ~/.config/aider/.env
+    set +a
+fi
 
 # Aliases
 alias aid='aider'

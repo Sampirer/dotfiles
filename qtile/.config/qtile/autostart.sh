@@ -11,14 +11,17 @@ dunst &
 # Network Manager Applet
 nm-applet &
 
-# Wallpaper (mit feh) - Optional, wenn du ein Wallpaper hast
-feh --bg-scale ~/Pictures/wallpapers/tokyo-night-storm/wallhaven_x82pmz_2560x1440.png &
+# Wallpaper setzen (fallback auf einfarbig wenn feh/nitrogen nicht verfügbar)
+if command -v feh >/dev/null 2>&1; then
+    feh --bg-scale ~/Pictures/wallpapers/tokyo-night-storm/wallhaven_x82pmz_2560x1440.png 2>/dev/null || xsetroot -solid "#24283b"
+elif command -v nitrogen >/dev/null 2>&1; then
+    nitrogen --restore 2>/dev/null || xsetroot -solid "#24283b"
+else
+    xsetroot -solid "#24283b"
+fi
 
-# Setze Cursor Theme (optional)
-# xsetroot -cursor_name left_ptr &
-
-# Disable screen blanking (optional)
-# xset s off -dpms &
+# Bildschirmschoner deaktivieren
+xset s off -dpms
 
 # Flameshot im Hintergrund starten
 flameshot &

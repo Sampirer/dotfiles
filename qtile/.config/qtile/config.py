@@ -276,13 +276,13 @@ def init_widgets_list():
             background=colors["bg"],
         ),
 
-        # Power Menu Placeholder
-        widget.QuickExit(
-            default_text="⏻",
-            countdown_format="[{}]",
+        # Power Menu (Custom)
+        widget.TextBox(
+            text="⏻",
             foreground=colors["red"],
             background=colors["bg"],
             fontsize=16,
+            mouse_callbacks={"Button1": lambda: lazy.spawn("rofi -show power-menu")},
         ),
     ]
     return widgets_list
