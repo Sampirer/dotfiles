@@ -58,8 +58,5 @@ blueman-applet &
 # USB Auto-Mount
 udiskie --tray &
 
-# Batterie-Applet
-cbatticon &
-
 # Qtile starten
 exec qtile start
