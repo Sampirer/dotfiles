@@ -1,0 +1,12 @@
+# Aider + OpenRouter + Claude Sonnet
+model: openrouter/anthropic/claude-sonnet-4-20250514
+
+# Git-Integration
+auto-commits: true
+attribute-author: true
+commit-prompt: conventional
+
+# Verhalten
+stream: true
+pretty: true
+auto-lint: true

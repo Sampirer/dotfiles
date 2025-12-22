@@ -12,7 +12,7 @@ dunst &
 nm-applet &
 
 # Wallpaper (mit feh) - Optional, wenn du ein Wallpaper hast
-feh --bg-scale --randomize ~/Pictures/wallpapers/tokyo-night-storm/*
+feh --bg-scale ~/Pictures/wallpapers/tokyo-night-storm/wallhaven_x82pmz_2560x1440.png &
 
 # Setze Cursor Theme (optional)
 # xsetroot -cursor_name left_ptr &
