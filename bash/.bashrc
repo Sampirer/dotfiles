@@ -14,6 +14,10 @@ export DMENU="rofi -dmenu"
 # uv
 export PATH="$HOME/.local/bin:$PATH"
 
+# zoxide (smarter cd)
+eval "$(zoxide init bash)"
+alias cd='z'
+
 # === Aider AI Assistant ===
 # API Key laden (sicher)
 if [[ -f ~/.config/aider/.env ]]; then
