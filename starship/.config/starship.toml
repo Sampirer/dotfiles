@@ -1,0 +1,130 @@
+# Starship Configuration - Tokyo Night Storm Theme
+# Carsten's Arch Linux Setup
+
+# Prompt format
+format = """
+[╭─](bold cyan)\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$golang\
+$package\
+$cmd_duration\
+$line_break\
+[╰─](bold cyan)$character"""
+
+# Right prompt
+right_format = """$time"""
+
+# Character
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold yellow)"
+
+# Username
+[username]
+style_user = "bold blue"
+style_root = "bold red"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+# Hostname
+[hostname]
+ssh_only = false
+format = "[@$hostname](bold purple) "
+disabled = false
+
+# Directory
+[directory]
+style = "bold cyan"
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = "🔒"
+read_only_style = "red"
+
+# Git branch
+[git_branch]
+symbol = " "
+style = "bold purple"
+format = "on [$symbol$branch]($style) "
+
+# Git status
+[git_status]
+style = "bold red"
+format = "([\\[$all_status$ahead_behind\\]]($style) )"
+conflicted = "⚡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = "?${count}"
+stashed = "$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+# Programming languages
+[python]
+symbol = " "
+style = "bold yellow"
+format = "via [$symbol$pyenv_prefix($version )(\\($virtualenv\\) )]($style)"
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "via [$symbol($version )]($style)"
+
+[rust]
+symbol = " "
+style = "bold red"
+format = "via [$symbol($version )]($style)"
+
+[golang]
+symbol = " "
+style = "bold cyan"
+format = "via [$symbol($version )]($style)"
+
+# Package version
+[package]
+symbol = "📦 "
+style = "bold magenta"
+format = "is [$symbol$version]($style) "
+
+# Command duration
+[cmd_duration]
+min_time = 2_000
+style = "bold yellow"
+format = "took [$duration]($style) "
+
+# Time
+[time]
+disabled = false
+style = "bold white"
+format = "[$time]($style)"
+time_format = "%H:%M:%S"
+
+# Line break
+[line_break]
+disabled = false
+
+# Custom colors for Tokyo Night Storm
+[palettes.tokyonight_storm]
+background = "#24283b"
+foreground = "#c0caf5"
+black = "#1d202f"
+red = "#f7768e"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#a9b1d6"
