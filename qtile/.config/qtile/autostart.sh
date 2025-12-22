@@ -12,11 +12,28 @@ dunst &
 nm-applet &
 
 # Wallpaper setzen (fallback auf einfarbig wenn feh/nitrogen nicht verfügbar)
+WALLPAPER_PATH="$HOME/Pictures/wallpapers/tokyo-night-storm/wallhaven_x82pmz_2560x1440.png"
+
 if command -v feh >/dev/null 2>&1; then
-    feh --bg-scale ~/Pictures/wallpapers/tokyo-night-storm/wallhaven_x82pmz_2560x1440.png 2>/dev/null || xsetroot -solid "#24283b"
+    if [ -f "$WALLPAPER_PATH" ]; then
+        echo "Setting wallpaper with feh: $WALLPAPER_PATH"
+        feh --bg-scale "$WALLPAPER_PATH" || {
+            echo "feh failed, falling back to solid color"
+            xsetroot -solid "#24283b"
+        }
+    else
+        echo "Wallpaper file not found: $WALLPAPER_PATH"
+        echo "Falling back to solid color"
+        xsetroot -solid "#24283b"
+    fi
 elif command -v nitrogen >/dev/null 2>&1; then
-    nitrogen --restore 2>/dev/null || xsetroot -solid "#24283b"
+    echo "Using nitrogen to restore wallpaper"
+    nitrogen --restore || {
+        echo "nitrogen failed, falling back to solid color"
+        xsetroot -solid "#24283b"
+    }
 else
+    echo "No wallpaper tool found (feh/nitrogen), using solid color"
     xsetroot -solid "#24283b"
 fi
 
