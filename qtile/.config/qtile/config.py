@@ -217,6 +217,7 @@ def init_widgets_list():
 
         # WLAN
         widget.Wlan(
+            interface="wlp0s20f3",
             format="📶 {essid} {percent:2.0%}",
             foreground=colors["cyan"],
             background=colors["bg"],
