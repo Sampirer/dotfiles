@@ -215,12 +215,13 @@ def init_widgets_list():
             background=colors["bg"],
         ),
 
-        # Network
-        widget.Net(
-            format="  {down} ↓↑ {up}",
+        # WLAN
+        widget.Wlan(
+            format="📶 {essid} {percent:2.0%}",
             foreground=colors["cyan"],
             background=colors["bg"],
-            update_interval=2,
+            update_interval=5,
+            disconnected_message="📶 Nicht verbunden",
         ),
 
         widget.Sep(
