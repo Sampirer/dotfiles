@@ -1,0 +1,64 @@
+# Tokyo Night Storm GRUB Theme
+# Based on Tokyo Night color scheme
+
+# General settings
+title-text: ""
+desktop-image: "background.jpg"
+desktop-color: "#24283b"
+terminal-font: "DejaVu Sans Mono Regular 14"
+
+# Boot menu
++ boot_menu {
+    left = 20%
+    top = 20%
+    width = 60%
+    height = 60%
+    item_font = "DejaVu Sans Mono Regular 16"
+    item_color = "#c0caf5"
+    selected_item_color = "#24283b"
+    selected_item_pixmap_style = "select_*.png"
+    item_height = 32
+    item_padding = 8
+    item_spacing = 4
+    icon_width = 24
+    icon_height = 24
+    item_icon_space = 8
+}
+
+# Progress bar
++ progress_bar {
+    id = "__timeout__"
+    left = 20%
+    top = 82%
+    width = 60%
+    height = 24
+    font = "DejaVu Sans Mono Regular 14"
+    text_color = "#c0caf5"
+    fg_color = "#7dcfff"
+    bg_color = "#414868"
+    border_color = "#565f89"
+    text = "@TIMEOUT_NOTIFICATION_LONG@"
+}
+
+# Labels
++ label {
+    top = 88%
+    left = 20%
+    width = 60%
+    height = 20
+    text = "Use ↑ and ↓ keys to select which entry is highlighted."
+    color = "#9aa5ce"
+    font = "DejaVu Sans Mono Regular 12"
+    align = "center"
+}
+
++ label {
+    top = 92%
+    left = 20%
+    width = 60%
+    height = 20
+    text = "Press enter to boot the selected OS, 'e' to edit commands, 'c' for a command-line."
+    color = "#9aa5ce"
+    font = "DejaVu Sans Mono Regular 12"
+    align = "center"
+}
