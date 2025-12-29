@@ -1,53 +1,98 @@
-# Carsten's Dotfiles - Tokyo Night Storm
+# Dotfiles
 
-Arch Linux + Qtile Setup mit durchgängigem Tokyo Night Storm Theme.
+Meine persönlichen Konfigurationsdateien, verwaltet mit GNU Stow.
 
-## 🎨 Theme
+## Installation
 
-**Tokyo Night Storm**
-- Background: `#24283b`
-- Foreground: `#c0caf5`  
-- Accent: `#7dcfff` (Cyan)
-
-## 📦 Components
-
-- **Qtile** - Window Manager
-- **Alacritty** - Terminal  
-- **Picom** - Compositor (xrender for Intel iGPU)
-- **Dunst** - Notifications
-- **Rofi** - App Launcher
-- **SDDM** - Display Manager (Tokyo Night Theme)
-- **GRUB** - Bootloader (Tokyo Night Theme)
-
-## 🚀 Installation
-
-### Dotfiles
 ```bash
-git clone https://github.com/Sampirer/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-stow bash qtile alacritty picom dunst rofi x11
+# Repository klonen
+git clone <repository-url> ~/.dotfiles
+cd ~/.dotfiles
+
+# Alle Konfigurationen installieren
+stow */
+
+# Oder einzelne Pakete installieren
+stow <package-name>
 ```
 
-### SDDM Theme
-```bash
-sudo cp -r sddm/usr/share/sddm/themes/tokyo-night /usr/share/sddm/themes/
-sudo cp sddm/etc/sddm.conf /etc/sddm.conf
-sudo systemctl restart sddm
-```
+## Pakete
 
-### GRUB Theme  
-```bash
-sudo cp -r grub/boot/grub/themes/tokyo-night /boot/grub/themes/
-sudo cp grub/etc/default/grub /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
+### aider
 
-## ⌨️ Keybindings
+**Enthaltene Dateien:**
+- `.config/aider/config.yml`
+- `.config/aider/.env`
+- `.config/aider/.env.template`
 
-- `Mod4 + Enter` - Terminal
-- `Mod4 + d` - Rofi App Launcher
-- `Mod4 + hjkl` - Navigate Windows
-- `Mod4 + Ctrl + r` - Reload Qtile
+### alacritty
 
----
-**Hardware**: Dell Latitude 7340 (Intel i7 + iGPU)
+**Enthaltene Dateien:**
+- `.config/alacritty/alacritty.toml`
+
+### bash
+
+**Enthaltene Dateien:**
+- `.bash_profile`
+- `.bashrc`
+
+### blesh
+
+**Enthaltene Dateien:**
+- `.config/blesh/init.sh`
+
+### dunst
+
+**Enthaltene Dateien:**
+- `.config/dunst/dunstrc`
+
+### grub
+
+**Enthaltene Dateien:**
+- `boot/grub/themes/tokyo-night/theme.txt`
+- `etc/default/grub`
+- `README.md`
+
+### picom
+
+**Enthaltene Dateien:**
+- `.config/picom/picom.conf`
+
+### qtile
+
+**Enthaltene Dateien:**
+- `.config/qtile/autostart.sh`
+- `.config/qtile/config.py`
+
+### rofi
+
+**Enthaltene Dateien:**
+- `.config/rofi/config.rasi`
+
+### screenshots
+
+**Enthaltene Dateien:**
+- `desktop_20251222_171127.png`
+
+### sddm
+
+**Enthaltene Dateien:**
+- `etc/sddm.conf`
+- `README.md`
+- `usr/share/sddm/themes/tokyo-night/Main.qml`
+- `usr/share/sddm/themes/tokyo-night/theme.conf`
+
+### starship
+
+**Enthaltene Dateien:**
+- `.config/starship.toml`
+
+### x11
+
+**Enthaltene Dateien:**
+- `.xinitrc`
+
+## Screenshots
+
+![Screenshot](screenshots/desktop_20251222_171127.png)
+
