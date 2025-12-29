@@ -50,7 +50,7 @@ dunst &
 nm-applet &
 
 # Wallpaper
-nitrogen --restore 2>/dev/null || xsetroot -solid "#282a36"
+~/.fehbg 2>/dev/null || xsetroot -solid "#24283b"
 
 # Bluetooth-Applet
 blueman-applet &
