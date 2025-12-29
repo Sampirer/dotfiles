@@ -1,6 +1,5 @@
+# Aider Cache
 .aider*
 
-# Secrets
+# Secrets - NIEMALS committen!
 **/.env
-.aider*
-aider/.config/aider/.env
