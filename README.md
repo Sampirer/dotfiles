@@ -128,16 +128,25 @@ Neu bei Tiling Window Managern? Schau dir die [Dokumentation](docs/README.md) an
 
 | Color | Hex | Preview |
 |-------|-----|---------|
-| Background | `#24283b` | ![#24283b](https://via.placeholder.com/20/24283b/24283b) |
-| Foreground | `#c0caf5` | ![#c0caf5](https://via.placeholder.com/20/c0caf5/c0caf5) |
-| Blue | `#7aa2f7` | ![#7aa2f7](https://via.placeholder.com/20/7aa2f7/7aa2f7) |
-| Cyan | `#7dcfff` | ![#7dcfff](https://via.placeholder.com/20/7dcfff/7dcfff) |
-| Green | `#9ece6a` | ![#9ece6a](https://via.placeholder.com/20/9ece6a/9ece6a) |
-| Red | `#f7768e` | ![#f7768e](https://via.placeholder.com/20/f7768e/f7768e) |
-| Purple | `#bb9af7` | ![#bb9af7](https://via.placeholder.com/20/bb9af7/bb9af7) |
-| Yellow | `#e0af68` | ![#e0af68](https://via.placeholder.com/20/e0af68/e0af68) |
+| Background | `#24283b` | ![bg](https://img.shields.io/badge/-%20-24283b) |
+| Foreground | `#c0caf5` | ![fg](https://img.shields.io/badge/-%20-c0caf5) |
+| Blue | `#7aa2f7` | ![blue](https://img.shields.io/badge/-%20-7aa2f7) |
+| Cyan | `#7dcfff` | ![cyan](https://img.shields.io/badge/-%20-7dcfff) |
+| Green | `#9ece6a` | ![green](https://img.shields.io/badge/-%20-9ece6a) |
+| Red | `#f7768e` | ![red](https://img.shields.io/badge/-%20-f7768e) |
+| Purple | `#bb9af7` | ![purple](https://img.shields.io/badge/-%20-bb9af7) |
+| Yellow | `#e0af68` | ![yellow](https://img.shields.io/badge/-%20-e0af68) |
 
 </div>
+
+---
+
+## 🤖 Credits
+
+This setup was created with significant assistance from [Claude](https://claude.ai) (Anthropic).
+
+Diese Konfiguration wurde mit erheblicher Unterstützung von [Claude](https://claude.ai) (Anthropic) erstellt.
+
 
 ---
 
