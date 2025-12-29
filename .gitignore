@@ -3,3 +3,4 @@
 # Secrets
 **/.env
 .aider*
+aider/.config/aider/.env
